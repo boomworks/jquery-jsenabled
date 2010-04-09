@@ -9,7 +9,7 @@
 (function($) {
 
 	$.jsEnabled = function(){
-		return !!(new Boolean(NaN));
+		return !!!{}.$;
 	};
 
 })(jQuery);
