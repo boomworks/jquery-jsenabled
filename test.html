@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>jQuery JS Enabled</title>
+
+	<style type="text/css">
+	body {
+		font-family: sans-serif;
+		background: #fff;
+		color: #333;
+		text-align: center;
+	}
+
+	#is-js-enabled {
+		color: #0c0;
+		font-weight: bold;
+		font-size: 3em;
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Is JS enabled?</h1>
+
+	<div id="is-js-enabled">Dunno</div>
+
+	<script type="text/javascript" src="http://jscdn.net/jquery.js"></script>
+	<script type="text/javascript" src="jquery-jsenabled.js"></script>
+	<script type="text/javascript">
+
+	$(function(){
+		$('#is-js-enabled').text($.jsEnabled() ? 'Yes' : 'No');
+
+		$('body').click(function(){
+			$('#is-js-enabled').text($.jsEnabled() ? 'Yes' : 'No');
+		});
+
+	});
+
+	</script>
+
+</body>
+</html>
